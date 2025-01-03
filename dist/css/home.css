@@ -3,6 +3,9 @@ body {
   margin: 0;
 }
 
+header button:hover {
+  cursor: url("../../source-img/nut-cursor.png"), auto;
+}
 header a:hover {
   cursor: url("../../source-img/nut-cursor.png"), auto;
 }

@@ -1,0 +1,128 @@
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+$border: solid brown 3px;
+main {
+  @include width-height(100%, 80%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../source-img/sfondo-contatto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.social-icon {
+  width: 350px;
+  margin-top: 50px;
+  padding-left: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+label {
+  font-family: DynaPuff;
+}
+
+.social-icon-img {
+  width: 50px;
+  border-radius: 12px;
+  cursor: url("../../source-img/nut-cursor.png"), auto;
+}
+
+input {
+  margin-bottom: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  border: $border;
+}
+.text-area {
+  height: 60px;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  border: $border;
+}
+
+.submit {
+  margin-top: 30px;
+  height: 45px;
+  font-family: DynaPuff;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 15px;
+  border: $border;
+}
+.info-contatto {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+}
+
+a {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#squirrel-k-left {
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    flex-direction: column;
+  }
+  .social-icon {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  footer {
+    padding-top: 30px;
+    flex: 1;
+    align-items: flex-end;
+    padding-bottom: 40px;
+  }
+
+  #a-squirrel-k-left {
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+  }
+}

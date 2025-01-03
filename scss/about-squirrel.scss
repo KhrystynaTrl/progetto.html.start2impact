@@ -1,0 +1,26 @@
+.squirrel-desc {
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+  font-family: cursive;
+  font-style: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../source-img/sfondo-about.jpg);
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
